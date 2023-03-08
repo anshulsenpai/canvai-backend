@@ -13,6 +13,10 @@ const imageGenerator = require("./routes/imageGenerator");
 // use routes
 app.use("/create", imageGenerator);
 
+app.get('/', (req, res) => {
+  res.status(200).send("canvai server running")
+})
+
 // listner
 app.listen(PORT, () => {
   console.log(`Server is started on http://localhost:${PORT}`);
